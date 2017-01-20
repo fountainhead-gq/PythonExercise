@@ -9,5 +9,7 @@
 
 [查询火车票](https://github.com/fountainhead-gq/PythonExercise/tree/master/TrainTickets)
 
-[weixin robot](https://github.com/fountainhead-gq/PythonExercise/tree/master/wechat_robot)
+[weixin robot](https://github.com/fountainhead-gq/PythonExercise/tree/master/wechat_robot)   
+
+[django简易博客](https://github.com/fountainhead-gq/PythonExercise/tree/master/django-blog)  
 
