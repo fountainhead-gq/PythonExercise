@@ -1,0 +1,67 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta name="renderer" content="webkit"/>
+    <title>{% if title %}{{title}}-{% endif %}郭澍存</title>
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link href="{% static 'css/tomorrow.css' %}" type="text/css" rel="stylesheet"/>
+    <link href="{% static 'css/blog.css' %}" type="text/css" rel="stylesheet"/>
+
+    {% block header_ext %}
+    {% endblock %}
+
+</head>
+<body class="yue">
+<div id="body_wrapper">
+    <div style="background-image: url({% static 'image/mars.jpg'%})" class="header">
+        <div class="header_wrapper">
+
+                <h1 class="title">
+                    ShuCun.GUO
+                </h1>
+
+            <ul class="nav">
+                <li><a href="/">首页</a>
+                </li>
+                <li><a href="{% url 'archive' %}">目录</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+        {% block main %}
+        {% endblock %}
+    </div>
+
+    <footer id="footer">
+        <div class="powered_by">
+            <p>Copyright &copy; 澍存 2016</p>
+        </div>
+    </footer>
+</div>
+
+<script src="{% static 'js/jquery-1.11.3.min.js' %}"></script>
+<script src="{% static 'js/highlight.min.js' %}"></script>
+<script>
+    $(document).ready(function() {
+        $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+    });
+</script>
+{% block footer_ext %}
+{% endblock %}
+
+<!--JavaScript-->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+
+</body>
+</html>
